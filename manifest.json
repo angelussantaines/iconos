@@ -1,22 +1,21 @@
 {
-    "short_name": "Emaus Hombres Nov-23",
-    "name": "Emaus Nov-23",
-    "icons": [
-      {
-        "src": "https://raw.githubusercontent.com/angelussantaines/iconos/main/icono-192x192.png",
-        "type": "image/png",
-        "sizes": "192x192"
-      },
-      {
-        "src": "https://raw.githubusercontent.com/angelussantaines/iconos/main/icono-512x512.png",
-        "type": "image/png",
-        "sizes": "512x512"
-      }
-    ],
-    "start_url": "https://github.com/angelussantaines/iconos/blob/main/public.html",
-    "background_color": "#FFFFFF",
-    "display": "standalone",
-    "scope": "/",
-    "theme_color": "#000000"
-  }
-  
+  "short_name": "Emaus Hombres Nov-23",
+  "name": "Emaus Nov-23",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/angelussantaines/iconos/main/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://angelussantaines.github.io/iconos/icono-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "https://angelussantaines.github.io/iconos/public.html",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#000000"
+}
