@@ -3,12 +3,12 @@
   "name": "Emaus Nov-23",
   "icons": [
     {
-      "src": "icono-192x192.png",
+      "src": "https://github.com/angelussantaines/iconos/blob/main/android-chrome-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "icono-512x512.png",
+      "src": "https://github.com/angelussantaines/iconos/blob/main/android-chrome-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
