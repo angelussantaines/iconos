@@ -3,17 +3,17 @@
   "name": "Emaus Nov-23",
   "icons": [
     {
-      "src": "https://github.com/angelussantaines/iconos/blob/main/android-chrome-192x192.png?raw=true",
+      "src": "https://github.com/angelussantaines/iconos/blob/main/192x192.png?raw=true",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "https://github.com/angelussantaines/iconos/blob/main/android-chrome-512x512.png?raw=true",
+      "src": "https://github.com/angelussantaines/iconos/blob/main/512x512.png?raw=true",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": "https://angelussantaines.github.io/iconos/public.html",
+  "start_url": "https://angelussantaines.github.io/iconos/index.html",
   "background_color": "#FFFFFF",
   "display": "standalone",
   "scope": "/",
