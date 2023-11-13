@@ -2,18 +2,49 @@
 <html>
 <head>
     <title>Mi Página Local</title>
-    <!-- Agrega aquí tus otros elementos del head, como estilos CSS o scripts -->
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
     <h1>Bienvenido a la Sección Local</h1>
-    <p>Esta es la parte local de mi sitio web. Haz clic en el enlace de abajo para añadir esta aplicación a tu pantalla de inicio.</p>
+    <p>Esta es la parte local de mi sitio web.</p>
 
-    <!-- Muestra una imagen local -->
-    <img src="ruta/a/tu/imagen.jpg" alt="Imagen Local">
+    <!-- Incluir aquí tu contenido local -->
 
-    <!-- Enlace manual para ir a la sección pública alojada en línea -->
-    <p><a href="https://angelussantaines.github.io/iconos/public.html">Ir a la Sección Pública</a></p>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                console.log('Service Worker registrado con éxito:', registration);
+            }).catch(function(error) {
+                console.log('Error al registrar el Service Worker:', error);
+            });
+        }
+    </script>
+</body>
+</html>
 
-    <!-- Más contenido local aquí -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Página Local</title>
+    <link rel="manifest" href="https://raw.githubusercontent.com/angelussantaines/iconos/main/manifest.json">
+</head>
+<body>
+    <h1>Bienvenido a la Sección Local</h1>
+    <p>Esta es la parte local de mi sitio web.</p>
+    <!-- Agrega aquí tu contenido local (texto, imágenes, etc.) -->
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                    console.log('Service Worker registrado con éxito con el alcance: ', registration.scope);
+                }, function(err) {
+                    console.log('Service Worker registro fallido:', err);
+                });
+            });
+        }
+    </script>
 </body>
 </html>
