@@ -13,20 +13,14 @@
     <input type="file" id="archivoInput" accept=".html">
     <br><br>
 
-    <!-- Aquí se mostrará el contenido del archivo foto.html -->
-    <div id="contenidoArchivo"></div>
-
     <script>
         document.getElementById('archivoInput').addEventListener('change', function(e) {
             var archivo = e.target.files[0];
             if (archivo) {
-                var reader = new FileReader();
-                reader.onload = function(e) {
-                    var contenido = e.target.result;
-                    // Mostrar el contenido en la página
-                    document.getElementById('contenidoArchivo').innerHTML = contenido;
-                };
-                reader.readAsText(archivo);
+                // Crear un URL temporal para el archivo
+                var urlArchivo = URL.createObjectURL(archivo);
+                // Redirige a la nueva URL
+                window.location.href = urlArchivo;
             }
         });
 
