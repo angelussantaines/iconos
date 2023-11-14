@@ -5,11 +5,25 @@
     <link rel="manifest" href="https://angelussantaines.github.io/iconos/manifest.json">
 </head>
 <body>
-    <h1>Bienvenido a la Sección Publica</h1>
-    <p>Esta es la parte publica de mi sitio web.</p>
-    <!-- Agrega aquí tu contenido local (texto, imágenes, etc.) -->
+    <h1>Bienvenido. <br>Esta aplicación es para ver la foto de grupo del retiro de Emaús ralizado el 10, 11, 12 de Noviembre de 2023</h1>
+    <p></p>
+    <p>Si no tienes el archivo foto.html, solicita a Carlos que te lo mande.</p>
+
+    <!-- Campo de entrada para el archivo -->
+    <input type="file" id="archivoInput" accept=".html">
+    <br><br>
 
     <script>
+        document.getElementById('archivoInput').addEventListener('change', function(e) {
+            var archivo = e.target.files[0];
+            if (archivo) {
+                // Crear un URL temporal para el archivo
+                var urlArchivo = URL.createObjectURL(archivo);
+                // Redirige a la nueva URL
+                window.location.href = urlArchivo;
+            }
+        });
+
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
                 navigator.serviceWorker.register('/iconos/service-worker.js').then(function(registration) {
