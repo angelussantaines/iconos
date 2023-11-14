@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emaus Hombres Noviembre 2023</title>
+    <link rel="manifest" href="https://angelussantaines.github.io/iconos/manifest.json">
+</head>
+<body>
+    <h1>Bienvenido a la Sección Publica</h1>
+    <p>Esta es la parte publica de mi sitio web.</p>
+    <p>Si no tienes el archivo foto.html, solicita a Carlos que te lo mande y te dé instrucciones.</p>
+
+    <!-- Campo de entrada para el archivo -->
+    <input type="file" id="archivoInput" accept=".html">
+    <br><br>
+
+    <!-- Aquí se mostrará el contenido del archivo foto.html -->
+    <div id="contenidoArchivo"></div>
+
+    <script>
+        document.getElementById('archivoInput').addEventListener('change', function(e) {
+            var archivo = e.target.files[0];
+            if (archivo) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    var contenido = e.target.result;
+                    // Mostrar el contenido en la página
+                    document.getElementById('contenidoArchivo').innerHTML = contenido;
+                };
+                reader.readAsText(archivo);
+            }
+        });
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/iconos/service-worker.js').then(function(registration) {
+                    console.log('Service Worker registrado con éxito con el alcance: ', registration.scope);
+                }, function(err) {
+                    console.log('Service Worker registro fallido:', err);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
